@@ -14,10 +14,13 @@ function App() {
               <li>Title: {item.title}</li>
               <li>Year: {item.year}</li>
               <li>Runtime: {item.runtime}</li>
-              <li>Genres:  
-                <span className="movie-genres">{item.genres[0]}</span>
-                <span className="movie-genres">{item.genres[1]}</span>
-                </li>
+              <li>Genres:
+                { item.genres.map((item => {
+                  return (
+                    <span className="movie-genres">{item}</span>
+                  )
+                }))}
+                </li>   
               <li>IMDB Ratings: {item.imdbRating} </li>
               <li>IMDB Votes: {item.imdbVotes}</li>
               </ul>
