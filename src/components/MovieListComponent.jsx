@@ -11,11 +11,11 @@ const MovieListComponent = (props) => {
           <p className="movie-genre-item">
             Genres:
             {props.genres.map((genre, index) => {
-              return (
+              return index < 2 ? (
                 <p className="movie-genre" key={index}>
                   {genre}
                 </p>
-              );
+              ) : null;
             })}
           </p>
           <p>IMDB Ratings: {props.imdbRating}</p>
